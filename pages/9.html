@@ -118,7 +118,7 @@
                 <br>
                 <br>
             <code>
-                <p class="lead text-muted" style="line-height: 220%;background-color:rgb(255, 248, 240);">=IFERROR(TEXTJOIN(",";TRUE;SORT(INDEX(UNIQUE(FILTER(SOURCE[BATCH];(SOURCE[Type]="")*(MONTH(SOURCE[DATE])=MONTH(TODAY()))*(SOURCE[C]=0)));;);;1));"")</span></p>
+                <p class="lead text-muted" style="line-height: 220%;text-align:justify;background-color:rgb(255, 248, 240);">=IFERROR(TEXTJOIN(",";TRUE;SORT(INDEX(UNIQUE(FILTER(SOURCE[BATCH];(SOURCE[Type]="")*(MONTH(SOURCE[DATE])=MONTH(TODAY()))*(SOURCE[C]=0)));;);;1));"")</span></p>
             </code>
                 <br>
                 <br>
@@ -136,9 +136,7 @@
                             Here’s how it works:
                             <br>
                             <br>
-                            <li>&emsp;FILTER(SOURCE[BATCH];(SOURCE[Type]="")*(MONTH(SOURCE[DATE])=MONTH(TODAY()))*(SOURCE[C]=0)) returns an array of values where each value is a cell in the column BATCH of the table SOURCE where the value in the column Type is empty,
-                                <br><br>
-                                 in the column Date the month is the same as today and the value in the column C is 0.</li>
+                            <li>&emsp;FILTER(SOURCE[BATCH];(SOURCE[Type]="")*(MONTH(SOURCE[DATE])=MONTH(TODAY()))*(SOURCE[C]=0)) returns an array of values where each value is a cell in the column BATCH of the table SOURCE where the value in the column Type is empty, in the column Date the month is the same as today and the value in the column C is 0.</li>
                                 <br><li>&emsp;UNIQUE(...) returns an array of unique values from the array returned by step 1.</li>
                                 <br><li>&emsp;INDEX(...) returns the first cell in the column BATCH of the table SOURCE.</li>
                                 <br><li>&emsp;SORT(...) sorts the array returned by step 2 in ascending order.</li>
@@ -159,7 +157,7 @@
 
 <div class="col-9 col-lg-4 mx-auto">
 
-  <iframe class="position-absolute start-50 translate-middle-x" col-4 width="460" height="300" src="https://www.youtube.com/embed/70BxljaMgek" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <iframe class="position-absolute start-50 translate-middle-x" col-4 width="360" height="250" src="https://www.youtube.com/embed/70BxljaMgek" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         
 <!--<video class="position-absolute start-50 translate-middle-x" col-4 width="320" height="240" controls src="..\video\Controlling values not included in a another table.mp4" autoplay>
     Your browser does not support the video format!
