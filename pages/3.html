@@ -135,11 +135,11 @@
                                 <br>
                                 <li>&emsp;First, build an aux table, from your main table, with 2 columns, "Source" and "Description". To make it easy to understand, in my video, I did it in the same sheet;</li>
                                 <br><li>&emsp;Extract from previous table and column Description" the corresponding values from the column "Source" using the formula: 
-                                <br><br>  "=IFERROR(FILTER(TableXX[Description];TableXX[Source]=G32);"").
+                                <br><br> "=IFERROR(FILTER(TableXX[Description];TableXX[Source]=G32);"").
                                 <br><br>TableXX is your table. "G32" is a cell where your value is and you want to include. Repeat for how many values you want. </li>
                                 <br><li>&emsp;Select, in the main table, the column "Source". Then, go to tab "Data" and select "Data validation". Hit "Allow" and select "List". Finally, in "source", select "G32"; "G33", and so on;</li>
                                 <br><li>&emsp;Go to tab "Formulas and select "Name Manager". Hit "New" and name it, for example, <span style="color:red">"SPOT"</span>. In "Refers to" insert:
-                                <br><br> =INDEX(('EXCEL - NOT AN EXPERT'!$G$33#;'EXCEL - NOT AN EXPERT'!$H$33#;'EXCEL - NOT AN EXPERT'!$I$33#;'EXCEL - NOT AN EXPERT'!$J$33#;'EXCEL - NOT AN EXPERT'!$K$33#;'EXCEL - NOT AN EXPERT'!$L$33#;'EXCEL - NOT AN EXPERT'!$M$33#);;;MATCH('EXCEL - NOT AN EXPERT'!$M22;'EXCEL - NOT AN EXPERT'!$G$32:$M$32;0))
+                                <br><br> <code>   =INDEX(('EXCEL - NOT AN EXPERT'!$G$33#;'EXCEL - NOT AN EXPERT'!$H$33#;'EXCEL - NOT AN EXPERT'!$I$33#;'EXCEL - NOT AN EXPERT'!$J$33#;'EXCEL - NOT AN EXPERT'!$K$33#;'EXCEL - NOT AN EXPERT'!$L$33#;'EXCEL - NOT AN EXPERT'!$M$33#);;;MATCH('EXCEL - NOT AN EXPERT'!$M22;'EXCEL - NOT AN EXPERT'!$G$32:$M$32;0))</code>
                                 <br><br>This formula, will extract the "Description" values returned in step 2, matching each cell from column "Source" (main table), as long as they are equal to "G32"; "G33", and so on;
                             </li>
                                 <br><li>&emsp;Select, in the main table, the column "Description". Then, go to tab "Data" and select "Data validation". Hit "Allow" and select "List". Finally, in "source", writedown <span style="color:red">"SPOT"</span>;</li>
