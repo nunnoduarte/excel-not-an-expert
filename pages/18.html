@@ -64,14 +64,15 @@
 
                 
         <form class="d-flex" role="search" action="https://google.com/search" target="_blank" method="get">
-          
-          <input class="rounded-pill border" style="height: 50px;width: 50px" type="image" src="../Img/gg.jpg" alt="Search" class="img-fluid">
-      </form>
         
-        <form class="d-flex align-items-center" role="search" action="https://google.com/search" target="_blank" method="get">
-            <input class="form-control me-2 m-3 p-3 rounded-pill border border-5" type="search" name="q" placeholder="Search" aria-label="Search">
-            <input class="rounded-pill border" style="height: 50px;width: 50px" type="image" src="../Img/button.jpg" alt="Search" class="img-fluid">
+            <input class="rounded-pill border" style="height: 50px;width: 50px" type="image" src="../Img/gg.jpg" alt="Search" class="img-fluid">
         </form>
+          
+          <form class="d-flex align-items-center" role="search" action="https://google.com/search" target="_blank" method="get">
+              <input class="form-control me-2 m-3 p-3 rounded-pill border border-5" id="keyword" type="search" name="q" placeholder="Search" aria-label="Search">
+             
+              <input class="rounded-pill border" onclick="searchSite();" style="height: 50px;width: 50px" type="image" src="../Img/button.jpg" alt="Search" class="img-fluid">
+          </form>
        
 
         </div>
@@ -313,7 +314,18 @@
 </div>
     </section>
     
-
+    <script>
+        function searchSite() {
+        var x = document.getElementById("keyword").value;
+        const url_s="https://www.google.com/search?q=";
+        const url_e="+site%3Aexcel-notanexpert.com&aqs=chrome..69i57.12675j0j1&sourceid=chrome&ie=UTF-8"
+        var url = url_s + x + url_e;
+        var win=window.open(url, '_self');
+        win.focus();
+        
+        }
+        
+        </script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
